@@ -1,7 +1,8 @@
-package com.hust.ping.androidlover
+package com.hust.ping.androidlover.ui.main
 
-import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+import com.hust.ping.androidlover.R
 
 class MainActivity : AppCompatActivity() {
 
