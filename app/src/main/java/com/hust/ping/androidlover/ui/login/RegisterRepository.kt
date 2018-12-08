@@ -1,6 +1,9 @@
 package com.hust.ping.androidlover.ui.login
 
-import android.util.Log
+import com.hust.ping.androidlover.utils.AndroidLoverPreference
+import com.hust.ping.androidlover.utils.isLogin
+import com.hust.ping.androidlover.utils.name
+import com.hust.ping.androidlover.utils.pwd
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
 
@@ -38,7 +41,9 @@ class RegisterRepository(private val registerState: RegisterState) {
                             registerState.registerError(it.errorMsg)
                         else {
                             registerState.registerSuccess()
-                            Log.d("@HusterYP",it.toString())
+                            AndroidLoverPreference.isLogin = true
+                            AndroidLoverPreference.name = name
+                            AndroidLoverPreference.pwd = pwd
                         }
                     }
             }

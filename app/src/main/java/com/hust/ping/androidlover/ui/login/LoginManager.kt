@@ -2,7 +2,6 @@ package com.hust.ping.androidlover.ui.login
 
 import com.hust.ping.androidlover.bean.UserBean
 import io.reactivex.Observable
-import retrofit2.http.Header
 import retrofit2.http.POST
 import retrofit2.http.Query
 

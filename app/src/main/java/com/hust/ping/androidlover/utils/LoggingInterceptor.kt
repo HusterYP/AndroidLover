@@ -7,7 +7,7 @@ import okhttp3.Response
 /**
  * @created by PingYuan at 12/8/18
  * @email: husteryp@gmail.com
- * @description:
+ * @description: 调试URL
  */
 class LoggingInterceptor : Interceptor {
 
