@@ -4,6 +4,7 @@ import android.app.Application
 import androidx.annotation.NonNull
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
+import org.jetbrains.anko.toast
 
 /**
  * @created by PingYuan at 12/5/18
@@ -17,6 +18,7 @@ class LoginViewModel(@NonNull application: Application) : AndroidViewModel(appli
         const val LOGIN_ING = 1
         const val USER_NAME_NULL = 2
         const val PWD_NULL = 4
+        const val LOGIN_ERROR = 5
     }
 
     var loginState: MutableLiveData<Int> = MutableLiveData()
@@ -38,5 +40,10 @@ class LoginViewModel(@NonNull application: Application) : AndroidViewModel(appli
     override fun loginSuccess() {
         loginState.value = LOGIN_SUCCESS
 
+    }
+
+    override fun loginError(error: String) {
+        loginState.value = LOGIN_ERROR
+        com.hust.ping.androidlover.Application.application.toast(error)
     }
 }

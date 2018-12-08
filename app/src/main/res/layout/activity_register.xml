@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.login.LoginActivity">
+    android:background="#fff"
+    tools:context=".ui.login.RegisterActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -13,13 +13,18 @@
         android:paddingStart="16dp"
         android:paddingEnd="16dp">
 
+        <ImageView
+            android:layout_width="180dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@mipmap/android_robot" />
+
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="120dp">
+            android:layout_height="wrap_content">
 
             <AutoCompleteTextView
-                android:id="@+id/login_name"
+                android:id="@+id/register_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/login_email"
@@ -29,13 +34,12 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
-
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
             <AutoCompleteTextView
-                android:id="@+id/login_pwd"
+                android:id="@+id/register_pwd"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/login_pwd"
@@ -45,59 +49,43 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
-        <RelativeLayout
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:paddingStart="16dp"
-            android:paddingEnd="16dp">
+            android:layout_height="wrap_content">
 
-            <TextView
-                android:id="@+id/login_forget_pwd"
-                android:layout_width="wrap_content"
+            <AutoCompleteTextView
+                android:id="@+id/register_confirm_pwd"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_marginTop="18dp"
-                android:layout_marginEnd="20dp"
-                android:layout_toStartOf="@id/login_register"
-                android:text="@string/login_forget_pwd"
-                android:textSize="18sp" />
+                android:hint="@string/register_confirm_pwd"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:singleLine="true" />
 
-            <TextView
-                android:id="@+id/login_register"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_centerVertical="true"
-                android:layout_marginTop="18dp"
-                android:layout_marginEnd="20dp"
-                android:text="@string/login_register"
-                android:textSize="18sp" />
-
-        </RelativeLayout>
+        </com.google.android.material.textfield.TextInputLayout>
 
         <Button
-            android:id="@+id/login"
+            android:id="@+id/register"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="28dp"
+            android:layout_marginTop="48dp"
             android:background="#C65146"
-            android:text="@string/login_login"
+            android:text="@string/register_register"
             android:textColor="#FFF"
             android:textSize="22sp" />
 
     </LinearLayout>
 
     <FrameLayout
-        android:id="@+id/login_progress_root"
+        android:id="@+id/register_progress_root"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:visibility="gone"
-        android:background="#99777777">
+        android:background="#99777777"
+        android:visibility="gone">
 
         <ProgressBar
-            android:id="@+id/login_progress"
+            android:id="@+id/register_progress"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
