@@ -7,9 +7,13 @@
     tools:context=".ui.login.SplashActivity">
 
     <TextView
+        android:id="@+id/splash_txt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:text="Hello Android" />
+        android:layout_centerHorizontal="true"
+        android:alpha="0"
+        android:textColor="#DE6449"
+        android:text="Android"
+        android:textSize="62sp" />
 
 </RelativeLayout>
