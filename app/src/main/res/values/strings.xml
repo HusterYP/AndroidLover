@@ -27,4 +27,6 @@
     <string name="confirm_pwd_error">The confirm password error</string>
     <string name="register_error">Something error</string>
     <string name="no_network">当前网络不可用</string>
+    <string name="set_gesture">手势密码</string>
+    <string name="confirm_lock">确认密码</string>
 </resources>

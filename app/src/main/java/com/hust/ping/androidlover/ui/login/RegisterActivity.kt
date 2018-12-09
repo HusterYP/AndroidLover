@@ -56,7 +56,7 @@ class RegisterActivity : AppCompatActivity() {
                 }
                 RegisterViewModel.REGISTER_SUCCESS -> {
                     register_progress_root.visibility = View.GONE
-                    val intent = Intent(this, MainActivity::class.java)
+                    val intent = Intent(this, GestureUnLockActivity::class.java)
                     startActivity(intent)
                     finish()
                 }

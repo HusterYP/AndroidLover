@@ -13,3 +13,4 @@ object AndroidLoverPreference : HasSharedPreference {
 var AndroidLoverPreference.isLogin: Boolean by BooleanSPReadWriteDelegate("isLogin", false)
 var AndroidLoverPreference.name: String by StringSPReadWriteDelegate("name", "")
 var AndroidLoverPreference.pwd: String by StringSPReadWriteDelegate("pwd", "")
+var AndroidLoverPreference.unLock: String by StringSPReadWriteDelegate("unLock", "")

@@ -11,6 +11,7 @@ import com.hust.ping.androidlover.R
 import com.hust.ping.androidlover.ui.main.MainActivity
 import com.hust.ping.androidlover.utils.hideInput
 import kotlinx.android.synthetic.main.activity_login.*
+import org.jetbrains.anko.startActivity
 
 class LoginActivity : AppCompatActivity() {
 
@@ -57,6 +58,11 @@ class LoginActivity : AppCompatActivity() {
             startActivity(intent)
             finish()
             overridePendingTransition(R.anim.activity_in, R.anim.activity_out)
+        }
+        login_forget_pwd.setOnClickListener {
+            login_forget_pwd.setTextColor(Color.parseColor("#FCCF31"))
+            val intent = Intent(this@LoginActivity, ResetPwdActivity::class.java)
+            startActivity(intent)
         }
     }
 }
